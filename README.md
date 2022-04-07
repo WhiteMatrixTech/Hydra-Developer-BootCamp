@@ -2,8 +2,8 @@
 A repository to collect projects for Hydra Developer BootCamp
 
 
-(Official Website)[https://labs.confluxnetwork.org/]
-(Telegram Group)[https://t.me/ChainIDEAfrica]
+[Official Website](https://labs.confluxnetwork.org/)
+[Telegram Group](https://t.me/ChainIDEAfrica)
 
 ------------------------------------------------------------------------------------------
 
