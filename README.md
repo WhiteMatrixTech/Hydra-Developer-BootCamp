@@ -1,7 +1,9 @@
 # Hydra-Developer-BootCamp $7000 Bounty
 A repository to collect projects for Hydra Developer BootCamp
 
-https://user-images.githubusercontent.com/16441258/162163594-ace9dcbe-70c5-4b77-9fc0-4226090ae3fd.png
+![](https://user-images.githubusercontent.com/16441258/162163594-ace9dcbe-70c5-4b77-9fc0-4226090ae3fd.png)
+
+
 [Official Website](https://labs.confluxnetwork.org/)
 
 [Telegram Group](https://t.me/ChainIDEAfrica)
