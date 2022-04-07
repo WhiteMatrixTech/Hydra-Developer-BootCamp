@@ -77,7 +77,7 @@ cd xxxxxxxxxxx
 
   The downloaded folder in Windows can be checked in the route below.
 
-> C:\Users\user name\2022-BSC-ChainIDE-Developer-Bootcamp\
+> C:\Users\user name\Hydra-Developer-Bootcamp\
 
 **5.Create a folder named by your team name under projects. Generate a README.md file which contains the information of your team, your project and the link to your github repository.**
 
