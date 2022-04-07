@@ -59,7 +59,7 @@ Validate if the comfiguration is successful.
 
 **3.Fork the open-source codes into the personal remote repository.**
 
-Repository URL: https://github.com/WhiteMatrixTech/2022-BSC-ChainIDE-Developer-Bootcamp
+Repository URL: https://github.com/WhiteMatrixTech/Hydra-Developer-BootCamp
 
   ![](https://chainide-forum-img.s3.ap-northeast-1.amazonaws.com/8208.png)
 
