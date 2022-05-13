@@ -122,6 +122,35 @@ It is unique to each band, perhaps group of participants.
 `Note`: Please refer to the package.json for full dependencies and packages.
 
 #### Deployment
+Digesu currently runs on Conflux testnet with following deployment details
+
+- **Deployer**: 0xe29D321FB47c03e3b3aab3fF1AB78b344F9De3cD
+- **DexPool Contract Address**: 0x31C8dD6042819BA14e55418F9e810727fF21C67d
+- **Test QFT**: 0x69a8a8181E9E43Ea5f125b796d359be50fdC4bFa
+- **Initial Mint**:  ```{
+  hash: '0xfc0677b859f36e5a8a86e150910d4de6ef485e2da07a39e65612b2621c5f2867',
+  type: 0,
+  accessList: null,
+  blockHash: null,
+  blockNumber: null,
+  transactionIndex: null,
+  confirmations: 0,
+  from: '0xe29D321FB47c03e3b3aab3fF1AB78b344F9De3cD',
+  gasPrice: BigNumber { _hex: '0x01', _isBigNumber: true },
+  gasLimit: BigNumber { _hex: '0x04c34f', _isBigNumber: true },
+  to: '0x69a8a8181E9E43Ea5f125b796d359be50fdC4bFa',
+  value: BigNumber { _hex: '0x00', _isBigNumber: true },
+  nonce: 7,
+  data: '0xb6afc4dc000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000001b1ae4d6e2ef5000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000e29d321fb47c03e3b3aab3ff1ab78b344f9de3cd0000000000000000000000009aeaf25960004b1cd5c1932ffd5c3a72713683a7000000000000000000000000e63537c16094fcd6b49fe6730c182ec973940f4f000000000000000000000000a7b2387bf4c259e188751b46859fca7e2043fefd',
+  r: '0x8d2c9b2321855c218fcdfea7b9d7069d4684f376b5b1e9045d01a1ae5fde6bab',
+  s: '0x774f6793dc7c43856553cd6a792505268762aad4c37e2266513df518284fef2e',
+  v: 178,
+  creates: null,
+  chainId: 71,
+  wait: [Function (anonymous)]
+}```
+
+
 We deployed the DApp using Vercel, running at the domain **[app.quatre.finance](https://app.quatre.finance)**.
 
 ---------------------------
