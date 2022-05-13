@@ -1,4 +1,4 @@
-### Team Name
+## Team Name
 Quatre.
 
 ## Job Allocation
@@ -19,7 +19,7 @@ Quatrefinance as the umbrella/parent project, is building from but not limited t
 ### Wallet Service.
 ---------------------------
 ## Quatre Digesu
-This is first ever product launched by Quatrefinance from the second category targeted at digitalizing a culture custom to the Africans communities. It introduces a new paradigm to an existing scheme of lending and borrowing culture of the Africans, remove the known barriers and make it accessible globally. Usually, it involves two or more people coming together to form a group for the purpose of raising funds by peer contribution, and does not involve paying interest.
+This is first ever product launched by Quatrefinance from the second category targeted at digitalizing a culture custom to the African communities. It introduces a new paradigm to an existing scheme of lending and borrowing culture of the Africans, remove the known barriers and make it accessible globally. Usually, it involves two or more people coming together to form a group for the purpose of raising funds by peer contribution, and does not involve paying interest.
 
 Often, participations are limited to a close location/area or a set of people where one knows someone and knows another. Yet, the known dare devils has not been solved by a mere man knows man since trust is a destination that is practically unreachable where human to human interaction is concerned. Some of the existing problems with this scheme itemized as:
 
@@ -35,21 +35,21 @@ Digesu users can interact in three ways:
 
 - **Invest**: Users can commit idle funds or rather called 'savings' in Digesu's Public Permissionless Robot (PPR) to increase their income instead of keeping them idle and being eaten up gradually by inflation. Users can choose from investment options such as Stakings, Liquidity and StartUps.
 
-- **Governance**: We believe Digesu community will be large, hence we created a incentivized Decentralized Autonomaus Community (DAC) to encourage effective participation in decision making.
+- **Governance**: We believe Digesu community will be large, hence we created an incentivized Decentralized Autonomaus Community (DAC) to encourage effective participation in decision making.
 
 -----------------------
 
 ### Second category and biz model
 
-The second category of Digesu has a picture of what we hope to achieve even on a longterm. Starting from Nigeria, We will combine both web3 and web2 to bring blockchain to every doorsteps. 
+The second category of Digesu has a picture of what we hope to achieve even on a long-term. Starting from Nigeria, We will combine both web3 and web2 to bring blockchain to every doorsteps. 
 
-Looking at the huge population of Nigeria (over 200 Million), from our research (not confirmed), at least 7% of the workforce do daily contribution (daily savings), of which most of them keep money with either micro finance, a man who comes around or someone from the yard, take one of every 'n' contribution they made i.e N/N ==> charges.
+Looking at the huge population of Nigeria (over 200 Million), from our research (not confirmed), at least 7% of the workforce do daily contribution (daily savings), of which most of them keep money with either micro finance, a man who comes around or someone from the yard, take one of every 'N' contributions they made i.e N/N ==> charges.
 
 This category inherits similar setbacks from the first category. Our aim is to leverage blockchain solution to help people make the best use of their savings, give them rest of mind they desire, and secure their savings from inflation attack. 
 
 Take for instance, we are able to onboard say 5% of the total population on our platform, a projected income would be:
 
-Assume each user saves at least NGN100 daily for 7 days or 30 days. As an implied standard, the custodian fee is one of every 'N' contribution made irrespecive of whether they complete the period or not.
+Assume each user saves at least NGN100 daily for 7 days or 30 days. As an implied standard, the custodian fee is one of every 'N' contributions made irrespecive of whether they complete the period or not.
 
 Assume a total popultion of 200 Million.
 
@@ -82,7 +82,7 @@ Putting security first, We have adopted four patterns in designing the smart con
  - **Separation of concern or Parent-Child pattern**.
  - **Modular approach**.
 
-The base contract `DexPoolOneFile` is a compressed is modular, compressed into one file for easy verification. It is responsible for creating new instances of the proxy contract. Every call to the `DexPoolOneFile` from the frontend results in contract creation. So, each created band or community is identified by a unique contract address. For instance, if Bob launched a new band to raise loan, in the backend, a seprate contract is created for this course. Subsequent interact from Bob and every other participants of the same community is done from the created address. The initialization is done using an existing module from the **[Openzeppelin library](https://github.com/OpenZeppelin/openzeppelin-contracts)**. Shoutout to the OZ guys who made it available for us to use. Using unique salt parameter during initialization gives us an assurance that two bands cannot coexist. Since each band is administered from an entirely different address location hence no single point of failure.
+The base contract `DexPoolOneFile` is modular, compressed into one file for easy verification. It is responsible for creating new instances of the proxy contract. Most of the calls to the `DexPoolOneFile` from the frontend results in contract creation. So, each created band or community is identified by a unique contract address. For instance, if Bob launched a new band to raise loan, in the backend, a seprate contract is created for this course. Subsequent interact from Bob and every other participants of the same community is done from the created address. The initialization is done using an existing module from the **[Openzeppelin library](https://github.com/OpenZeppelin/openzeppelin-contracts)**. Shoutout to the OZ guys who made it available for us to use. Using unique salt parameter during initialization gives us an assurance that two bands cannot coexist. Since each band is administered from an entirely different address location hence no single point of failure.
 
 Aside of band creation utilities, other functional utilities in the **DexPoolOneFile** are administrative. We achieve this using a custom access moderating contract `Auth.sol`.
 
@@ -94,7 +94,7 @@ This is the child contract responsible for adminstering functions such as:
       - caller is a member but does not have enough `QFT` in wallet to deposit as collacteral.
       - other conditions for access are not true.
 
-  - **[payBack()]()**: Allows member (s) with outstanding debt to repay their loan. It is locked at construction. Act as condition for unlocking `getFinance` is call was successfull.
+  - **[payBack()]()**: Allows member (s) with outstanding debt to repay their loan. It is locked at construction. Act as condition for unlocking `getFinance` if call was successfull.
 
   - **[completeTheRound()]()**: Can be used to formally close the community only if everyone in the community is satistfied.
 
@@ -104,11 +104,13 @@ This is the child contract responsible for adminstering functions such as:
 
   - **[absorb()]()**: Any of the members in a community can absorb the current debt if the user has defaulted in payment. When this happens, the defaulter's collateral balance is weighed, a 5% penalty is charged against the defaulter in favor of the authorized caller. The balance of which is rolled back to the pool, and sent to the next in queue.
 
-  -------------------
+It is unique to each band, perhaps group of participants.
 
-  ### How we generate revenue from this category
+-------------------
 
-  Users pay a one-time fee (usually minimal) for creating a band. This is incurred by the band creator. In addition, the platform token (QFT) will be used as denomination for collateral.
+### How we generate revenue from this category
+
+  Users pay a one-time fee (usually minimal) for creating a band. This is incurred by the band creator. In addition, the platform token (QFT) will be used as denomination for collateral. More information about this will be released later.
 
   -------------------
 
@@ -117,12 +119,13 @@ This is the child contract responsible for adminstering functions such as:
   - NextJs, and
   - MaterialUI
 
-`Note`: Please refer the package.json for full dependencies and packages.
+`Note`: Please refer to the package.json for full dependencies and packages.
 
 #### Deployment
-We deployed the DApp using Vercel running at the domain **[app.quatre.finance](https://app.quatre.finance)**.
+We deployed the DApp using Vercel, running at the domain **[app.quatre.finance](https://app.quatre.finance)**.
 
-It is unique to each band, perhaps group of participants.
+---------------------------
+
 **Video Link**: **[https://youtu.be/AzKNxFZxf18](https://youtu.be/AzKNxFZxf18)**
 
 -----------------
