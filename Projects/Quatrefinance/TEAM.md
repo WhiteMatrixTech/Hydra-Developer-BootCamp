@@ -1,0 +1,103 @@
+### Team Name
+Quatre.
+
+## Job Allocation
+- **Tserundede Godswill**: Project administrator/Media.
+- **Isaac Jesse**: Project Coordinator, Developer - Frontend/Backend/(Solidity, Web3, Reactjs, NextJs).
+- **Shewa** : Designer.
+- **Rex**: Frontend.
+- **Gbenga**: UI/UX
+
+## Project Intro
+Quatre-finance is a platform for decentralized applications. We aim not to completely uninstall the application world but to continuously re-emphasize the need for true decentralization, while building decentralized products tailored to individual needs putting them in complete control of their funds and/or investments. [More information about Quatrefinance](https://github.com/Quatre-Finance/Q-paper/blob/main/INTRO.md). 
+
+Quatrefinance as the umbrella/parent project, is building from but not limited to four major catgories: 
+
+### Exchange.
+### Lending and Borrowing.
+### p2P.
+### Wallet Service.
+---------------------------
+## Quatre Digesu
+This is first ever product launched by Quatrefinance from the second category targeted at digitalizing an a culture custom to the African communities. It introduces a new paradigm to an existing scheme of lending and borrowing culture of the Africans, remove the known barriers and make it accessible globally. Usually, it involves two or more people coming together to form a group for the purpose of raising funds by peer contribution, and does not involve paying interest.
+
+Often, participations are limited to a close location/area or a set of people where one knows someone and knows another. Yet, the known dare devils has not been solved by a mere man knows man since trust is a destination that is practically unreachable where human to human interaction is concerned. Some of the existing problems with this scheme itemized as:
+
+- **Trust issue**: Over the years, people are yet to overcome the recurring event of trust, hence, many are discouraged because they cannot entrust money in another. However, this accounts for why many were unable to gain financial freedom overtime.
+
+- **Absconders**: Some of the participants would joined with the motive of parting away with others' hard earned money. 
+
+- **Delay in payment**: There are myriad cases where participants delay and default in repayment of the loans.
+
+Digesu users can interact in three ways: 
+
+- **Finance**: Lending and borrowing without interest. We are also adding a feature where farmers and Artisans can have access to credit facilities.
+
+- **Invest**: Users can commit idle funds or rather called 'savings' in Digesu's Public Permissionless Robot (PPR) to increase their income instead of keeping them idle and being eaten up gradually by inflation. Users can choose from investment options such as Stakings, Liquidity and StartUps.
+
+- **Governance**: We believe Digesu community will be large, hence we created a incentivized Decentralized Autonomaus Community (DAC) to encourage effective participation in decision making.
+
+-----------------------
+
+## Our Motivation
+The future of blockchain as the mother technology is bright, even though we are just starting. So we are excited to join the adoption movement by creating solutions that solves people's daily challenges.
+
+-----------------------
+
+## Digesu's Technology and Architeture
+
+Digesu is designed to be blockchain agnostic i.e cross-chain compatibility with smart contract backing the protocol, a frontend, and design frames. 
+Even though we have different repositiories for each of the frameworks, for the purpose of this documentation, we have compressed both the frontend and solidity code in one repository that can be found **[here](https://github.com/Quatre-Finance/Core)**.
+
+The current frontend design for [Digesu](https://app.quatre.finance) is built for demo purpose. **[Here is the design we made for production](https://www.figma.com/file/eAK52TVb7n0HTwlNvtb4gv/?node-id=219%3A2655)**.
+
+#### Overview of the SC
+
+Putting security first, We have adopted four patterns in designing the smart contract:
+ - **Factory pattern**.
+ - **Proxy pattern**.
+ - **Separation of concern or Parent-Child pattern**.
+ - **Modular approach**.
+
+The base contract `DexPoolOneFile` is a compressed is modular, compressed into one file for easy verification. It is responsible for creating new instances of the proxy contract. Every call to the `DexPoolOneFile` from the frontend results in contract creation. So, each created band or community is identified by a unique contract address. For instance, if Bob launched a new band to raise loan, in the backend, a seprate contract is created for this course. Subsequent interact from Bob and every other participants of the same community is done from the created address. The initialization is done using an existing module from the **[Openzeppelin library](https://github.com/OpenZeppelin/openzeppelin-contracts)**. Shoutout to the OZ guys who made it available for us to use. Using unique salt parameter during initialization gives us an assurance that two bands cannot coexist. Since each band is administered from an entirely different address location hence no single point of failure.
+
+Aside of band creation utilities, other functional utilities in the **DexPoolOneFile** are administrative. We achieve this using a custom access moderating contract `Auth.sol`.
+
+#### Pproxy.sol
+
+This is the child contract responsible for adminstering functions such as:
+  - **[getFinance()]()**: Locked on intialization. Active only when the quorum is achieved. Can be called by any of the participants or members but fund is send to the next in queue. This function will fail if: 
+      - caller is not a member of the band.
+      - caller is a member but does not have enough `QFT` in wallet to deposit as collacteral.
+      - other conditions for access are not true.
+
+  - **[payBack()]()**: Allows member (s) with outstanding debt to repay their loan. It is locked at construction. Act as condition for unlocking `getFinance` is call was successfull.
+
+  - **[completeTheRound()]()**: Can be used to formally close the community only if everyone in the community is satistfied.
+
+  - **[claim()]()**: After the round is closed, each member can withdraw or claim collateral balance. This is an explicit call, not automated.
+
+  - **[liquidate()]()**: Liquidates the current beneficiary if they they have exceeded the repayment time given. It should be manually called by any of the members of the band. Request can only be executed if current timestamp is greater than expected repayment time.
+
+  - **[absorb()]()**: Any of the members in a community can absorb the current debt if the user has defaulted in payment. When this happens, the defaulter's collateral balance is weighed, a 5% penalty is charged against the defaulter in favor of the authorized caller. The balance of which is rolled back to the pool, and sent to the next in queue.
+
+  -------------------
+
+## The Frontend
+  We have adopted two frameworks to built the frontend: 
+  - NextJs, and
+  - MaterialUI
+
+`Note`: Please refer the package.json for full dependencies and packages.
+
+#### Deployment
+We deployed the DApp using Vercel running at the domain **[app.quatre.finance](https://app.quatre.finance)**.
+
+It is unique to each band, perhaps group of participants.
+**Video Link**: https://youtu.be/AzKNxFZxf18
+
+-----------------
+
+**Repository Address**
+
+**[https://github.com/Quatre-Finance/Core](https://github.com/Quatre-Finance/Core)**
