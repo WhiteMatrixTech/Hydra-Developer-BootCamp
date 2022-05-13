@@ -19,7 +19,7 @@ Quatrefinance as the umbrella/parent project, is building from but not limited t
 ### Wallet Service.
 ---------------------------
 ## Quatre Digesu
-This is first ever product launched by Quatrefinance from the second category targeted at digitalizing an a culture custom to the African communities. It introduces a new paradigm to an existing scheme of lending and borrowing culture of the Africans, remove the known barriers and make it accessible globally. Usually, it involves two or more people coming together to form a group for the purpose of raising funds by peer contribution, and does not involve paying interest.
+This is first ever product launched by Quatrefinance from the second category targeted at digitalizing a culture custom to the Africans communities. It introduces a new paradigm to an existing scheme of lending and borrowing culture of the Africans, remove the known barriers and make it accessible globally. Usually, it involves two or more people coming together to form a group for the purpose of raising funds by peer contribution, and does not involve paying interest.
 
 Often, participations are limited to a close location/area or a set of people where one knows someone and knows another. Yet, the known dare devils has not been solved by a mere man knows man since trust is a destination that is practically unreachable where human to human interaction is concerned. Some of the existing problems with this scheme itemized as:
 
@@ -36,6 +36,29 @@ Digesu users can interact in three ways:
 - **Invest**: Users can commit idle funds or rather called 'savings' in Digesu's Public Permissionless Robot (PPR) to increase their income instead of keeping them idle and being eaten up gradually by inflation. Users can choose from investment options such as Stakings, Liquidity and StartUps.
 
 - **Governance**: We believe Digesu community will be large, hence we created a incentivized Decentralized Autonomaus Community (DAC) to encourage effective participation in decision making.
+
+-----------------------
+
+### Second category and biz model
+
+The second category of Digesu has a picture of what we hope to achieve even on a longterm. Starting from Nigeria, We will combine both web3 and web2 to bring blockchain to every doorsteps. 
+
+Looking at the huge population of Nigeria (over 200 Million), from our research (not confirmed), at least 7% of the workforce do daily contribution (daily savings), of which most of them keep money with either micro finance, a man who comes around or someone from the yard, take one of every 'n' contribution they made i.e N/N ==> charges.
+
+This category inherits similar setbacks from the first category. Our aim is to leverage blockchain solution to help people make the best use of their savings, give them rest of mind they desire, and secure their savings from inflation attack. 
+
+Take for instance, we are able to onboard say 5% of the total population on our platform, a projected income would be:
+
+Assume each user saves at least NGN100 daily for 7 days or 30 days. As an implied standard, the custodian fee is one of every 'N' contribution made irrespecive of whether they complete the period or not.
+
+Assume a total popultion of 200 Million.
+
+Target user (TU) = 5% * 200M ==> NGN1e7.
+Average Daily Contribution (ADC) = NGN100.
+where T = Taxation.
+
+projected montly revenue (if weekly subscribers) = ADC * TU * 4 ==> NGN4e9 -T.
+projected montly revenue (if monthly subscribers) = ADC * TU ==> NGN1e9 -T. 
 
 -----------------------
 
@@ -83,6 +106,12 @@ This is the child contract responsible for adminstering functions such as:
 
   -------------------
 
+  ### How we generate revenue from this category
+
+  Users pay a one-time fee (usually minimal) for creating a band. This is incurred by the band creator. In addition, the platform token (QFT) will be used as denomination for collateral.
+
+  -------------------
+
 ## The Frontend
   We have adopted two frameworks to built the frontend: 
   - NextJs, and
@@ -94,7 +123,7 @@ This is the child contract responsible for adminstering functions such as:
 We deployed the DApp using Vercel running at the domain **[app.quatre.finance](https://app.quatre.finance)**.
 
 It is unique to each band, perhaps group of participants.
-**Video Link**: https://youtu.be/AzKNxFZxf18
+**Video Link**: **[https://youtu.be/AzKNxFZxf18](https://youtu.be/AzKNxFZxf18)**
 
 -----------------
 
