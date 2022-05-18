@@ -11,6 +11,6 @@ Project Intro: SpaceNetwork is a generic message passing protocol that connects 
 
 SpaceNetwork does this through emitting messages from one chain which are observed by a Guardian network of nodes and verified. After verification, this message is submitted to the target chain for processing.
 
-Video Link: will be available on demo show day.
+Video Link: https://youtu.be/kQ5KP6dE9ak
 
 Repository Addr: https://github.com/orgs/Space-Network
