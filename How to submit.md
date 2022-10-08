@@ -15,12 +15,12 @@
        
     git config --global user.email xxxxxx@xxx.com
 
- ![](https://chainide-global-metaverse-bootcamp-pr-img.s3.ap-northeast-1.amazonaws.com/Gitconfig.png)
+ ![](https://d11chu8p22a2zy.cloudfront.net/Gitconfig.png)
 
    Create a local SSH —— Secure Shell.
 
     ssh-keygen -t rsa -C "xxxxxx@xxx.com" 
- ![](https://chainide-global-metaverse-bootcamp-pr-img.s3.ap-northeast-1.amazonaws.com/Gitlocalssh.png)
+ ![](https://d11chu8p22a2zy.cloudfront.net/Gitlocalssh.png)
 
    Configure SSH into Github Settings.
 
@@ -31,7 +31,7 @@
 > **Windows**: C:\Documents and Settings\Administrator\.ssh **OR** C:\Users\username\\.ssh
 
 
- ![](https://chainide-global-metaverse-bootcamp-pr-img.s3.ap-northeast-1.amazonaws.com/SSH_File.png)
+ ![](https://d11chu8p22a2zy.cloudfront.net/SSH_File.png)
 
 
 Open the file **id_rsa.pub** with Notepad and copy the content.
@@ -47,25 +47,26 @@ Open the file **id_rsa.pub** with Notepad and copy the content.
 
    Then, click "Add SSH key". There is no any specific requirement for title.
 
-   ![](https://chainide-global-metaverse-bootcamp-pr-img.s3.ap-northeast-1.amazonaws.com/GithubSettings.png)
+   ![](https://d11chu8p22a2zy.cloudfront.net/GithubSettings.png)
 
-   ![](https://chainide-global-metaverse-bootcamp-pr-img.s3.ap-northeast-1.amazonaws.com/SSH+and+GPG+keys.png)
+   ![](https://d11chu8p22a2zy.cloudfront.net/SSH+and+GPG+keys.png)
 
 Validate if the comfiguration is successful.
 
     ssh -T git@github.com
 
-![](https://chainide-global-metaverse-bootcamp-pr-img.s3.ap-northeast-1.amazonaws.com/SSH_Validation.png)
+![](https://d11chu8p22a2zy.cloudfront.net/SSH_Validation.png)
 
 **3.Fork the open-source codes into the personal remote repository.**
 
 Repository URL: https://github.com/WhiteMatrixTech/Hydra-Developer-BootCamp
 
-  ![](https://chainide-forum-img.s3.ap-northeast-1.amazonaws.com/8208.png)
+  ![](	
+https://d3f4u6mt7x0ttm.cloudfront.net/8208.png)
 
 **4.Clone personal github repository into local environment via SSH.**
 
-  ![](https://chainide-global-metaverse-bootcamp-pr-img.s3.ap-northeast-1.amazonaws.com/Code_Clone_SSH.png)
+  ![](https://d11chu8p22a2zy.cloudfront.net/Code_Clone_SSH.png)
 
     git clone git@github.com:XXXxx
 
@@ -93,23 +94,24 @@ Use the command line "git push" to upload the project folder to github.
     git commit -m 'submit'
     git push 
 
-![](https://chainide-global-metaverse-bootcamp-pr-img.s3.ap-northeast-1.amazonaws.com/GitPush.png)
+![](https://d11chu8p22a2zy.cloudfront.net/GitPush.png)
 
   Then, the README.md file can be seen on the github repository.
 
-![](https://chainide-global-metaverse-bootcamp-pr-img.s3.ap-northeast-1.amazonaws.com/Github_README.png)
+![](https://d11chu8p22a2zy.cloudfront.net/Github_README.png)
 
 **6.Click "New pull request" and create a PR(Pull Request).**
 
-![](https://chainide-forum-img.s3.ap-northeast-1.amazonaws.com/8213.png)
+![](https://d3f4u6mt7x0ttm.cloudfront.net/8213.png)
 
 **7.Convert PR into Draft where all the match-related resources should be placed.**
 
-![](https://chainide-global-metaverse-bootcamp-pr-img.s3.ap-northeast-1.amazonaws.com/ConvertPR2Draft.png)
+![](https://d11chu8p22a2zy.cloudfront.net/ConvertPR2Draft.png)
 
-![](https://chainide-forum-img.s3.ap-northeast-1.amazonaws.com/8237.png)
+![](	
+https://d3f4u6mt7x0ttm.cloudfront.net/8237.png)
 
 **8.Accomplish the project and submit.**
 
 **9.Convert the status of PR into "Ready For Review" as long as the submission has been done. Bootcamp staff will merge all the PRs.**
-![](https://chainide-global-metaverse-bootcamp-pr-img.s3.ap-northeast-1.amazonaws.com/Ready4View.png)
+![](https://d11chu8p22a2zy.cloudfront.net/Ready4View.png)
